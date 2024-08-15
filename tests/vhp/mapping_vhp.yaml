@@ -1,0 +1,19 @@
+subject: case study # Type for each entry (e.g. line).
+columns:
+    organ: # The column having this label.
+        to_object: organ # The node type to which it is exported.
+        via_edge: case_study_to_organ # The edge type with which it is linked to the subject (here, "variant").
+    work_package:
+        to_property:
+            work_package:
+                - case study
+                
+subject: organ # Type for each entry (e.g. line).
+columns:
+    case_study:
+        to_object: case study
+        via_edge: case_study_to_organ
+    organ:
+        to_property:
+            name:
+                - organ

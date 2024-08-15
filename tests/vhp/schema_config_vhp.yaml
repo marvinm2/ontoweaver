@@ -1,0 +1,21 @@
+case_study: 
+  represented_as: node 
+  input_label: case study 
+  synonym_for: case # Actual name in Biolink.
+  properties: 
+    work_package: str
+    name: str 
+
+organ: 
+  represented_as: node 
+  input_label: organ 
+  synonym_for: gross anatomical structure # Actual name in Biolink.
+  properties: 
+    name: str 
+
+case_study_to_organ: 
+  is_a: association 
+  represented_as: edge 
+  source: case_study 
+  target: organ 
+  input_label: case study related organ 

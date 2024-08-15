@@ -1,0 +1,3 @@
+0:organ;'brain';'0:organ';'id';'AnatomicalEntity|BiologicalEntity|Entity|NamedThing|Organ|OrganismalEntity'
+1:organ;'kidney';'1:organ';'id';'AnatomicalEntity|BiologicalEntity|Entity|NamedThing|Organ|OrganismalEntity'
+2:organ;'brain';'2:organ';'id';'AnatomicalEntity|BiologicalEntity|Entity|NamedThing|Organ|OrganismalEntity'

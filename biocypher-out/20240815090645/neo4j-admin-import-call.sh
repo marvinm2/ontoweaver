@@ -1,0 +1,7 @@
+#!/bin/bash
+version=$(bin/neo4j-admin --version | cut -d '.' -f 1)
+if [[ $version -ge 5 ]]; then
+	neo4j-admin database import full --delimiter=";" --array-delimiter="|" --quote="'" --overwrite-destination=true --skip-bad-relationships=true --skip-duplicate-nodes=true --nodes="/home/marvin/Documents/VHP4Safety/Hackathons/Hackathon-2024/ontoweaver/biocypher-out/20240815090645/Organ-header.csv,/home/marvin/Documents/VHP4Safety/Hackathons/Hackathon-2024/ontoweaver/biocypher-out/20240815090645/Organ-part.*" --nodes="/home/marvin/Documents/VHP4Safety/Hackathons/Hackathon-2024/ontoweaver/biocypher-out/20240815090645/Case_study-header.csv,/home/marvin/Documents/VHP4Safety/Hackathons/Hackathon-2024/ontoweaver/biocypher-out/20240815090645/Case_study-part.*" test 
+else
+	neo4j-admin import --delimiter=";" --array-delimiter="|" --quote="'" --force=true --skip-bad-relationships=true --skip-duplicate-nodes=true --nodes="/home/marvin/Documents/VHP4Safety/Hackathons/Hackathon-2024/ontoweaver/biocypher-out/20240815090645/Organ-header.csv,/home/marvin/Documents/VHP4Safety/Hackathons/Hackathon-2024/ontoweaver/biocypher-out/20240815090645/Organ-part.*" --nodes="/home/marvin/Documents/VHP4Safety/Hackathons/Hackathon-2024/ontoweaver/biocypher-out/20240815090645/Case_study-header.csv,/home/marvin/Documents/VHP4Safety/Hackathons/Hackathon-2024/ontoweaver/biocypher-out/20240815090645/Case_study-part.*" --database=test 
+fi
